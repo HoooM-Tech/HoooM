@@ -26,3 +26,4 @@ export function Parallax({ children, speed = 0.5, className }: ParallaxProps) {
 }
 
 
+

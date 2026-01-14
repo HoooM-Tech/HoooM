@@ -169,7 +169,7 @@ export default function Home() {
             </motion.span>
           </h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto mb-8">
-            HoooM's productized social media system gives you predictable content, clear execution,
+            HoooM&apos;s productized social media system gives you predictable content, clear execution,
             and real visibility without hiring in-house or managing freelancers.
               </p>
           <motion.div
@@ -249,7 +249,7 @@ export default function Home() {
               Why Social Media Feels Harder Than It Should Be
             </h2>
             <p className="text-gray-600 text-lg">
-              Here's what most growing businesses struggle with:
+              Here&apos;s what most growing businesses struggle with:
             </p>
           </motion.div>
 
@@ -364,7 +364,7 @@ export default function Home() {
               >
               <h3 className="text-xl font-medium text-gray-900 mb-3">No clear content strategy</h3>
               <p className="text-gray-600 text-sm mb-6">
-                You're posting without a plan unsure what to say, who you're talking to, or how any of it supports your business goals.
+                You&apos;re posting without a plan unsure what to say, who you&apos;re talking to, or how any of it supports your business goals.
               </p>
               <div className="relative w-full max-w-md mx-auto h-80 overflow-hidden">
                 {/* Back card - rotated left (lowest z-index) */}
@@ -477,7 +477,7 @@ export default function Home() {
               >
                 <h3 className="text-xl font-medium text-gray-900 mb-3">Low engagement despite effort</h3>
                 <p className="text-gray-600 text-sm mb-6">
-                  You're creating content, but it's not getting noticed likes are low, comments are rare, and growth feels stagnant.
+                  You&apos;re creating content, but it&apos;s not getting noticed likes are low, comments are rare, and growth feels stagnant.
                 </p>
                 <div>
                   <div className="text-lg font-semibold text-gray-900 mb-6">Engagements</div>
@@ -612,7 +612,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                This isn't a traditional agency retainer.
+                This isn&apos;t a traditional agency retainer.
               </h3>
               <p className="text-gray-600 mb-6">
                 HoooM is a structured, productized system designed to remove friction and guesswork from social media. With us, you get:
