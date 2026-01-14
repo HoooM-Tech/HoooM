@@ -1,24 +1,101 @@
-# REACH Web Application
+# HoooM Pricing Landing Page
 
-A premium, fully responsive web application built with Next.js, TypeScript, Tailwind CSS, and world-class animations.
+A premium, fully responsive pricing and landing page for HoooM's productized social media management system. Built with Next.js, TypeScript, Tailwind CSS, and world-class animations powered by Framer Motion.
 
-## 🚀 Quick Start
+## 🚀 Overview
 
-**New to this project?** Start with **[START_HERE.md](./START_HERE.md)** for step-by-step instructions on updating from Figma.
+This landing page showcases HoooM's social media management services with a focus on:
+- **Problem-Solution Framework**: Highlights common social media challenges and presents HoooM as the solution
+- **Clear Pricing Structure**: Three tiered pricing plans (Presence, Growth, Amplify)
+- **Engaging Animations**: Premium micro-interactions and scroll-triggered animations throughout
+- **Mobile-First Design**: Fully responsive across all screen sizes
 
-**Ready to implement?** Follow **[UPDATE_FROM_FIGMA.md](./UPDATE_FROM_FIGMA.md)** for the complete workflow.
+## ✨ Features
 
-## Features
+### Design & UX
+- 🎨 **Pixel-Perfect Design** - Carefully crafted UI with attention to detail
+- 📱 **Fully Responsive** - Mobile-first design that works seamlessly on all devices
+- 🎭 **Premium Animations** - Smooth, engaging animations powered by Framer Motion
+- ⚡ **Performance Optimized** - Fast loading with Next.js Image optimization
+- ♿ **Accessible** - Semantic HTML and proper ARIA attributes
 
-- 🎨 **Pixel-Perfect Design** - Built from Figma with exact specifications
-- 🚀 **Next.js 14** - Latest App Router with TypeScript
-- 🎭 **Premium Animations** - Framer Motion powered smooth animations
-- 📱 **Fully Responsive** - Mobile-first design with Tailwind CSS
-- 🌓 **Dark/Light Theme** - System-aware theme switching
-- ♿ **Accessible** - ARIA attributes and keyboard navigation
-- ⚡ **Performance** - Optimized images and code splitting
+### Animation Features
+- **Stagger Animations** - Sequential reveals for headlines and list items
+- **3D Tilt Effects** - Interactive card tilting based on mouse position
+- **Parallax Scrolling** - Depth-based scroll animations for images
+- **Magnetic Buttons** - Interactive hover effects on CTA buttons
+- **Animated Counters** - Price numbers that count up on scroll
+- **Chart Animations** - Animated bar charts and line graphs
+- **Shake & Pulse Effects** - Attention-grabbing animations for alerts
+- **Floating Elements** - Subtle continuous animations
+- **Cascade Effects** - Staggered checkmark animations in pricing cards
+- **Shimmer Effects** - Shine animations on "Most Popular" badges
 
-## Getting Started
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Image Optimization**: Next.js Image component
+
+## 📦 Project Structure
+
+```
+├── app/
+│   ├── page.tsx           # Main landing page with all sections
+│   ├── layout.tsx         # Root layout
+│   └── globals.css        # Global styles
+├── components/
+│   ├── animations/        # Animation components
+│   │   ├── scroll-reveal.tsx
+│   │   ├── stagger-container.tsx
+│   │   ├── counter.tsx
+│   │   ├── parallax.tsx
+│   │   └── magnetic.tsx
+│   └── figma-wrapper.tsx  # Figma integration utilities
+├── hooks/
+│   └── use-scroll-reveal.ts
+└── public/                # Static assets (images)
+```
+
+## 🎯 Page Sections
+
+### 1. Hero Section
+- Animated headline with word-by-word stagger effect
+- Floating hero image with scale animation
+- Magnetic CTA buttons with hover effects
+- Smooth fade-in animations
+
+### 2. Problem Section
+Four problem cards showcasing common social media challenges:
+- **Inconsistent Posting**: Cards with shake animation and alert badges
+- **No Clear Content Strategy**: 3D card stack visualization
+- **Too Much Time Coordinating**: Simple problem statement
+- **Low Engagement**: Animated bar chart with drawing line animation
+
+### 3. Solution Section
+- Staggered checklist items with pop animations
+- Team image with parallax effect
+- Clear value proposition presentation
+
+### 4. How It Works Section
+Four-step process cards:
+- Alternate slide-in directions (left/right)
+- Icon rotation animations with bounce
+- Lift effect on hover
+
+### 5. Pricing Section
+Three pricing tiers:
+- **Presence**: ₦120,000/month
+- **Growth**: ₦220,000/month (Most Popular with shimmer effect)
+- **Amplify**: ₦950,000/month
+- Animated price counters
+- Cascade checkmark animations
+- Enhanced hover effects with scale and shadow
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -44,104 +121,89 @@ npm run build
 npm start
 ```
 
-## Project Structure
+## 🎨 Customization
 
-```
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Home page
-│   ├── pricing/           # Pricing page
-│   ├── about/             # About page
-│   ├── contact/           # Contact page
-│   ├── showcase/          # Animation showcase page
-│   ├── loading.tsx        # Loading state
-│   ├── not-found.tsx      # 404 page
-│   └── globals.css        # Global styles
-├── components/            # React components
-│   ├── ui/               # Reusable UI components
-│   │   ├── button.tsx
-│   │   ├── card.tsx
-│   │   ├── input.tsx
-│   │   ├── toast.tsx
-│   │   └── ...
-│   ├── layout/           # Layout components
-│   │   ├── navbar.tsx
-│   │   └── footer.tsx
-│   └── animations/       # Animation components
-│       ├── scroll-reveal.tsx
-│       ├── stagger-container.tsx
-│       ├── counter.tsx
-│       ├── parallax.tsx
-│       └── magnetic.tsx
-├── hooks/                # Custom React hooks
-│   ├── use-theme.ts
-│   └── use-scroll-reveal.ts
-├── lib/                  # Utility functions
-│   └── utils.ts
-└── public/               # Static assets
-```
+### Colors
 
-## Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **UI Components**: Custom components with shadcn/ui patterns
-
-## Animation Features
-
-- **Page Transitions** - Smooth transitions between pages
-- **Scroll Reveals** - Elements animate as they enter viewport
-- **Staggered Animations** - Sequential animations for lists
-- **Hover & Tap Feedback** - Interactive button and card animations
-- **Floating Elements** - Continuous floating animations
-- **Parallax Effects** - Depth-based scroll animations
-- **Magnetic Effects** - Interactive magnetic hover effects
-- **Animated Counters** - Numbers that count up on scroll
-- **Micro-interactions** - Subtle animations throughout the UI
-
-## Figma Integration
-
-This project is set up for pixel-perfect implementation from Figma designs.
-
-### Quick Start with Figma
-
-1. **Extract Design Tokens**:
-   - Open the Figma file
-   - Enable Dev Mode (View > Developer Mode)
-   - Extract colors, typography, spacing from `lib/design-tokens.ts`
-   - Update values in `lib/design-tokens.ts`
-
-2. **Update CSS Variables**:
-   - Convert Figma hex colors to HSL
-   - Update `app/globals.css` with exact color values
-
-3. **Implement Screens**:
-   - Use `FigmaWrapper` and `FigmaContainer` components for exact spacing
-   - Use arbitrary Tailwind values for exact measurements: `h-[56px]`, `text-[24px]`
-   - Follow `IMPLEMENTATION_GUIDE.md` for step-by-step instructions
-
-### Documentation
-
-- **FIGMA_INTEGRATION.md** - Complete guide for extracting and applying Figma specs
-- **IMPLEMENTATION_GUIDE.md** - Step-by-step pixel-perfect implementation guide
-- **lib/figma-utils.ts** - Helper functions for Figma value conversion
-
-### Customization
-
-### Theme Colors
-
-Edit `app/globals.css` to customize the color scheme. Update with exact values from Figma.
+The project uses Tailwind CSS with custom color classes. Main colors:
+- **Teal**: `teal-400`, `teal-500` (primary CTA buttons)
+- **Orange**: `orange-500` (badges and accents)
+- **Gray**: Various shades for text and backgrounds
+- **Red**: `red-500` (alert badges)
 
 ### Animations
 
-Animation configurations are in:
-- `tailwind.config.ts` - CSS keyframes
-- Component files - Framer Motion variants
+Animation configurations are defined inline using Framer Motion:
+- Spring physics: `{ type: "spring", stiffness: 300, damping: 20 }`
+- Stagger delays: `0.1s`, `0.15s` for sequential animations
+- Duration: `0.5s` to `0.8s` for most animations
 
-## License
+### Responsive Breakpoints
+
+- Mobile: Default styles
+- `sm`: 640px+
+- `md`: 768px+
+- `lg`: 1024px+
+
+## 🔧 Key Components
+
+### Counter Component
+Animated number counter that counts up when scrolled into view:
+```tsx
+<Counter value={120} duration={1.5} />
+```
+
+### Tilt3D Component
+3D tilt effect based on mouse position:
+```tsx
+<Tilt3D>
+  <div>Your content</div>
+</Tilt3D>
+```
+
+### StaggerContainer & StaggerItem
+Sequential animation wrapper:
+```tsx
+<StaggerContainer staggerDelay={0.15}>
+  <StaggerItem>Item 1</StaggerItem>
+  <StaggerItem>Item 2</StaggerItem>
+</StaggerContainer>
+```
+
+## 📱 Responsive Design
+
+The page is fully responsive with:
+- Mobile-first approach
+- Flexible grid layouts
+- Responsive typography
+- Adaptive spacing and padding
+- Overflow protection to prevent horizontal scrolling
+
+## ⚡ Performance
+
+- Next.js Image optimization for all images
+- Code splitting with Next.js App Router
+- Optimized animations with Framer Motion
+- Minimal bundle size
+
+## 🐛 Troubleshooting
+
+### Horizontal Scrolling on Mobile
+If you experience horizontal scrolling, ensure:
+- All sections have `overflow-x-hidden`
+- Cards with `translate-x` have responsive values
+- Fixed widths are replaced with responsive classes
+
+### Animation Performance
+For better performance:
+- Use `viewport={{ once: true }}` for scroll animations
+- Limit simultaneous animations
+- Use `will-change` CSS property sparingly
+
+## 📄 License
 
 MIT
 
+## 👥 Credits
+
+Built with ❤️ using Next.js, TypeScript, Tailwind CSS, and Framer Motion.
