@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, HTMLMotionProps } from "framer-motion";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -11,7 +11,7 @@ interface DialogProps {
   children: React.ReactNode;
 }
 
-interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {
+interface DialogContentProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration"> {
   children: React.ReactNode;
 }
 
@@ -47,7 +47,7 @@ const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
           "fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 rounded-lg",
           className
         )}
-        {...props}
+        {...(props as Omit<HTMLMotionProps<"div">, "ref" | "children" | "className">)}
       >
         {children}
       </motion.div>
