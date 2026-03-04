@@ -455,10 +455,14 @@ export default function Home() {
                   stiffness: 300,
                   damping: 20
                 }}
-                className="h-[369px] bg-[#FFFFFF] p-[35px] overflow-hidden"
+                className="h-[369px] bg-[#E07B2A] rounded-lg p-[35px] shadow-xl relative overflow-hidden"
+                style={{
+                  backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+                  backgroundSize: "20px 20px",
+                }}
               >
-              <h3 className="text-xl font-medium text-gray-900 mb-3">Too Much Time Coordinating Creatives & Approvals</h3>
-              <p className="text-gray-600 text-sm">
+              <h3 className="text-xl font-medium text-white mb-3">Too Much Time Coordinating Creatives & Approvals</h3>
+              <p className="text-white/80 text-sm">
                     Managing designers, writers, revisions, and approvals eats up hours that should be spent growing the business.
               </p>
               </motion.div>
