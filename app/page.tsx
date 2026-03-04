@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring, useTransform, useScroll, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { Check, Calendar, Megaphone, FileText, TrendingUp, Facebook, Linkedin, Heart, ThumbsUp, Instagram } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -178,26 +179,30 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center "
           >
-            <motion.button
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 8px 16px rgba(20,184,166,0.4), 0 4px 8px rgba(20,184,166,0.3)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]"
-            >
-              Get Started
-            </motion.button>
-            <motion.button
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 4px 12px rgba(251,146,60,0.3)"
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="border-2 border-orange-500 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors"
-            >
-              Request a Custom Plan
-            </motion.button>
+            <Link href="/contract/waitlist">
+              <motion.button
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 8px 16px rgba(20,184,166,0.4), 0 4px 8px rgba(20,184,166,0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]"
+              >
+                Get Started
+              </motion.button>
+            </Link>
+            <Link href="/custom-plan">
+              <motion.button
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 4px 12px rgba(251,146,60,0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="border-2 border-orange-500 text-gray-900 px-8 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors"
+              >
+                Request a Custom Plan
+              </motion.button>
+            </Link>
           </motion.div>
             </motion.div>
 
@@ -917,13 +922,15 @@ export default function Home() {
               <p className="text-gray-600 text-sm mb-6">
                 A strong, professional baseline without daily involvement.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
-              >
-                Get Started
-              </motion.button>
+              <Link href="/contract/waitlist">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
+                >
+                  Get Started
+                </motion.button>
+              </Link>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -1019,13 +1026,15 @@ export default function Home() {
               <p className="text-gray-600 text-sm mb-6">
                 Everything in Presence, plus hands-off posting and performance tracking.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
-              >
-                Get Started
-              </motion.button>
+              <Link href="/contract/waitlist">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
+                >
+                  Get Started
+                </motion.button>
+              </Link>
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -1112,13 +1121,15 @@ export default function Home() {
               <p className="text-gray-600 text-sm mb-6">
                 Everything in Growth, plus paid amplification and deeper reporting.
               </p>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
-              >
-                Get Started
-              </motion.button>
+              <Link href="/contract/waitlist">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full border border-teal-400 text-teal-500 py-3 rounded-full font-medium hover:bg-teal-400 hover:text-white mb-8 transition-colors"
+                >
+                  Get Started
+                </motion.button>
+              </Link>
               <motion.div
                 initial="hidden"
                 whileInView="visible"

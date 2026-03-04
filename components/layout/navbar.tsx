@@ -17,7 +17,7 @@ const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "How it works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "Custom Plan", href: "/#pricing" },
+  { label: "Custom Plan", href: "/custom-plan" },
 ];
 
 export function Navbar() {
@@ -39,10 +39,8 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-background"
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-gray-200",
+        isScrolled && "shadow-sm"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,8 +49,12 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/" className="text-2xl font-bold text-[#4ECDC4]">
-              HoooM
+            <Link href="/" className="text-2xl font-bold flex items-center gap-1">
+              <span className="text-gray-900">H</span>
+              <span className="w-6 h-6 rounded-full bg-teal-400 flex items-center justify-center text-white text-xs font-bold">o</span>
+              <span className="w-6 h-6 rounded-full bg-teal-400 flex items-center justify-center text-white text-xs font-bold">o</span>
+              <span className="w-6 h-6 rounded-full bg-teal-400 flex items-center justify-center text-white text-xs font-bold">o</span>
+              <span className="text-gray-900">M</span>
             </Link>
           </motion.div>
 
@@ -70,10 +72,10 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "px-4 py-2 rounded-md text-sm font-medium transition-colors relative",
+                      "px-4 py-2 rounded-md text-[18px] font-normal transition-colors relative",
                       isActive
-                        ? "text-[#FF6B35]"
-                        : "text-foreground hover:text-[#FF6B35]"
+                        ? "text-[#FF6B35] font-medium"
+                        : "text-gray-600 hover:text-[#FF6B35]"
                     )}
                   >
                     {item.label}
@@ -84,9 +86,11 @@ export function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="default" className="bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]">
-              Get Started
-            </Button>
+            <Link href="/#pricing">
+              <Button variant="default" className="bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]">
+                View Plans
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -136,9 +140,11 @@ export function Navbar() {
             </motion.div>
           ))}
           <div className="pt-4">
-            <Button className="w-full bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]">
-              Get Started
-            </Button>
+            <Link href="/custom-plan" onClick={() => setIsOpen(false)}>
+              <Button className="w-full bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]">
+                View Plans
+              </Button>
+            </Link>
           </div>
         </div>
       </motion.div>
