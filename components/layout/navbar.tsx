@@ -140,7 +140,7 @@ export function Navbar() {
             </motion.div>
           ))}
           <div className="pt-4">
-            <Link href="/custom-plan" onClick={() => setIsOpen(false)}>
+            <Link href="/#pricing" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-teal-400 hover:bg-teal-500 text-white px-8 py-3 rounded-full font-medium transition-colors shadow-[4px_4px_8px_rgba(20,184,166,0.3),-4px_4px_8px_rgba(20,184,166,0.3),0_4px_8px_rgba(20,184,166,0.3)]">
                 View Plans
               </Button>
